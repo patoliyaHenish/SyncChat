@@ -1,9 +1,0 @@
-package installed :-
-React-router-dom
-Material UI
-moment
-6pp
-chart.js
-react-chartjs-2
-react-hot-toast
-react-helmet-async

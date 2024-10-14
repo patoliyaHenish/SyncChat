@@ -11,4 +11,20 @@ const connectDB = (uri) => {
     });
 };
 
-export { connectDB };
+const sendToken = (res, user, code, message) => { 
+  const token = "adfjhdj";
+
+  return res.status(code).cookie("chat-token", token, {
+    maxAge: 15 * 24 * 60 * 60 * 1000,
+    sameSite: "none",
+    httpOnly: true,
+    secure: true,
+  }).json({
+    success: true,
+    message,
+    token,
+    user,
+  })
+};
+
+export { connectDB, sendToken };
